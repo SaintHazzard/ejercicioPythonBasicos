@@ -22,7 +22,7 @@ def CalcTaxes(Age, Income):
 
 while(flag==False):
     try:
-        CalcTaxes(NoNegAge(Age), Income)
-        flag = True
+      CalcTaxes(NoNegAge(Age), Income)
+      flag = True
     except:
         print("Introduzca un número ome.")
