@@ -3,8 +3,8 @@ vuelto=0
 productos = [['Producto A', '270'], ['Producto B', '340'],    ['Producto C', '390']]; monedas = [10, 50, 100]
 def menu(productos):
     print('¿Qué producto desea? ')
-    for i in range(1, 4):
-        print(f'\t{i}. {productos[i-1][0]}')
+    for i in range(0, 3):
+        print(f'\t{i+1}. {productos[i][0]}')
     elecproducto = int(input())
     try:
       if elecproducto > 0 and elecproducto <= 3:
@@ -37,12 +37,11 @@ def maquina_alimentos(prod_elect):
     print('3. Moneda de 100$')
     elec_moneda = int(input())
     try:
-        if 1<elec_moneda <3:
+        if 0<elec_moneda <4:
          total_pago += monedas[elec_moneda - 1]
         else: raise ValueError()
     except ValueError:
         print(f'Eleccion no valida')
-    status=False
     print('Su pago actual es de: ', total_pago)
     input('Presione Enter para continuar...')
     if total_pago >= prod_elect:
