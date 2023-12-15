@@ -3,9 +3,7 @@ vuelto=0
 productos = [['Producto A', '270'], ['Producto B', '340'],    ['Producto C', '390']]; monedas = [10, 50, 100]
 def menu(productos):
     print('¿Qué producto desea? ')
-    for i in range(0, 3):
-        print(f'\t{i+1}. {productos[i][0]}')
-    elecproducto = int(input())
+    print('\t' + '\n\t'.join([f'{index + 1}. {producto[0]}' for index,producto in enumerate(productos)]));elecproducto = int(input())
     try:
       if elecproducto > 0 and elecproducto <= 3:
         return int(productos[elecproducto-1][1])
