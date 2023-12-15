@@ -1,4 +1,4 @@
-arrayDaysPrice=[]
+arrayDaysPrice=[];maxVar=0;
 
 def dataPriceDay():
   try:
@@ -8,14 +8,12 @@ def dataPriceDay():
         price=int(input(f'Precio de la monena en el dia {i}: '))
         arrayDaysPrice.append(price)
       return arrayDaysPrice
-    else:
-      raise ValueError()
+    else: raise ValueError()
   except ValueError:
     print(f'Entrada invalida, no trollee')
     return dataPriceDay()
 
 def maxVariation(array):
-  maxVar=0
   for i in range(0,len(arrayDaysPrice)-1):
     diffVar=arrayDaysPrice[i+1]-arrayDaysPrice[i]
     if diffVar > maxVar:
