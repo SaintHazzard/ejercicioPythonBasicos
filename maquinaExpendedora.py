@@ -15,12 +15,7 @@ def menu(productos):
       return menu(productos)
 
 def generar_vuelto(vuelto, monedas):
-    vueltos = [0, 0, 0]
-    vueltos[2] = vuelto // 100
-    vuelto = vuelto % 100
-    vueltos[1] = vuelto // 50
-    vuelto = vuelto % 50
-    vueltos[0] = vuelto // 10
+    vueltos = [0, 0, 0];vueltos[2] = vuelto // 100;vuelto = vuelto % 100;vueltos[1] = vuelto // 50;vuelto = vuelto % 50;vueltos[0] = vuelto // 10
     print('Su vuelto es: ')
     for i in range(2, -1, -1):
         for j in range(vueltos[i]):
