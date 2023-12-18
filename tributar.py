@@ -1,7 +1,7 @@
 Age = 0
 Income = 0
 flag = False
-
+# Holaaaa
 def NoNegAge(flag):
     while(flag==False):
         Age = int(input("Ingrese su edad.\n"))
